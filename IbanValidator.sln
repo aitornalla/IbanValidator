@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31911.196
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IbanValidatorApi", "IbanValidatorApi\IbanValidatorApi.csproj", "{836CE463-1E35-4A1A-B1B7-D88C10A02CFD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IbanValidatorApi", "IbanValidatorApi\IbanValidatorApi.csproj", "{836CE463-1E35-4A1A-B1B7-D88C10A02CFD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IbanValidator", "IbanValidator\IbanValidator.csproj", "{DC92EBE7-A803-4B60-BBF9-AA982CF323ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IbanValidator", "IbanValidator\IbanValidator.csproj", "{DC92EBE7-A803-4B60-BBF9-AA982CF323ED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
