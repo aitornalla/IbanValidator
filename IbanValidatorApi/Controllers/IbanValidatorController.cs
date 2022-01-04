@@ -20,7 +20,7 @@ namespace IbanValidatorApi.Controllers
         }
 
         [MapToApiVersion("1.0")]
-        [HttpPost]
+        [HttpGet]
         public async Task<IActionResult> Validate([FromQuery] string iban, [FromQuery] bool validateBban = false)
         {
             return Ok(await _ibanValidator.ValidateAsync(iban, validateBban));

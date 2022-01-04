@@ -197,7 +197,7 @@ public class IbanValidatorController : ControllerBase
 * Use the async or non-async *Validate* method from this service to validate the iban number (and bank account number).
 
 ## Repository example
-In this repository you may find an ASP.NET Core Web Api project example named *IbanValidatorApi* to test the library. Launch the project and post a request (https or http). Examples:
+In this repository you may find an ASP.NET Core Web Api project example named *IbanValidatorApi* to test the library. Launch the project and make a GET request (https or http). Examples:
 * `https://localhost:5001/api/v1/IbanValidator/?iban=AD4621567359786953274469`
 * `https://localhost:5001/api/v1/IbanValidator/?iban=PT50000101231234567890192&validateBban=true`
 
