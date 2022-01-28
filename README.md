@@ -10,6 +10,7 @@
 * [Bank account validations](#bank-account-validations)
 * [How to use the library in an ASP.NET Core project](#how-to-use-the-library-in-an-aspnet-core-project)
 * [Repository example](#repository-example)
+* [License](#license)
 
 ## General info
 This project contains a .NET Standard 2.0 class library for validating Iban numbers. This class library is intended to be used in an ASP.NET Core project as a service injected by DI, but can be modified to be used in any type of project.
