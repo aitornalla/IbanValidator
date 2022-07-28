@@ -1,20 +1,18 @@
-﻿using IbanValidator.Algorithms;
+﻿using IbanValidator;
+using IbanValidator.Algorithms;
 using IbanValidator.BbanValidators;
 using IbanValidator.Interfaces;
 using IbanValidator.Models;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
 
-namespace IbanValidator
+namespace Microsoft.Extensions.DependencyInjection
 {
     public static class IServiceCollectionExtensions
     {
-        public static void AddIbanValidator(this IServiceCollection services, IConfiguration ibanValidatorConfiguration)
+        public static IServiceCollection AddIbanValidator(this IServiceCollection services, IConfiguration ibanValidatorConfiguration)
         {
-            // Bind Iban validator configuration
-            services.Configure<IbanValidatorConfiguration>(ibanValidatorConfiguration);
             // Services
-            services.AddTransient<IIbanValidator, IbanValidator>();
+            services.AddTransient<IIbanValidator, IbanValidator.IbanValidator>();
             services.AddTransient<IIbanValidationService, IbanValidationService>();
             services.AddTransient<IBbanValidatorServiceResolver, BbanValidatorServiceResolver>();
             // Algorithms
@@ -39,6 +37,10 @@ namespace IbanValidator
             services.AddTransient<PolandBbanValidator>();
             services.AddTransient<SpainBbanValidator>();
             services.AddTransient<TunisiaBbanValidator>();
+            // Bind Iban validator configuration
+            services.Configure<IbanValidatorConfiguration>(ibanValidatorConfiguration);
+
+            return services;
         }
     }
 }
